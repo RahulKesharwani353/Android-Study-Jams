@@ -24,9 +24,9 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
-            val email: String = binding.InputEmail.text.toString()
-            val password: String = binding.InputPass.text.toString()
-            val confpassword: String = binding.InputConfirmPass.text.toString()
+            val email: String = binding.InputEmail.text.toString().trim()
+            val password: String = binding.InputPass.text.toString().trim()
+            val confpassword: String = binding.InputConfirmPass.text.toString().trim()
 
 
             if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password) || TextUtils.isEmpty(confpassword)) {
