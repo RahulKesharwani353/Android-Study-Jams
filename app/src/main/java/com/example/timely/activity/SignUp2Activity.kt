@@ -3,8 +3,12 @@ package com.example.timely.activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.timely.R
 import com.example.timely.dataClasses.Users
 import com.example.timely.databinding.ActivitySignUp2Binding
 import com.google.firebase.auth.FirebaseAuth
@@ -26,9 +30,41 @@ class SignUp2Activity : AppCompatActivity() {
         setContentView(binding.root)
         auth = FirebaseAuth.getInstance()
 
+
         binding.SubmitBtn1.setOnClickListener {
             createnewuser()
         }
+
+        val semesters = resources.getStringArray(R.array.semesters)
+        var sections: Array<String> = arrayOf("A","B")
+
+        val arrayAdapter = ArrayAdapter(this, R.layout.dropdowntext, semesters)
+        val arrayAdapter1 = ArrayAdapter(this@SignUp2Activity, R.layout.dropdowntext, sections)
+
+        binding.InputSem1.setAdapter(arrayAdapter)
+        binding.InputSection1.setAdapter(arrayAdapter1)
+
+//        binding.InputSem1?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+//            override fun onNothingSelected(parent: AdapterView<*>?) {
+//
+//            }
+//
+//            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+//                val sem = binding.InputSem1.text.toString()
+//
+//                when(sem){
+//
+//                    "3" -> sections = arrayOf("E","F")
+//                    "5" -> sections = arrayOf("A","B")
+//                    "7" -> sections = arrayOf("A","B")
+//                }
+//                val arrayAdapter1 = ArrayAdapter(this@SignUp2Activity, R.layout.dropdowntext, sections)
+//                binding.InputSection1.setAdapter(arrayAdapter1)
+////
+//            }
+//
+//        }
+
 
     }
 

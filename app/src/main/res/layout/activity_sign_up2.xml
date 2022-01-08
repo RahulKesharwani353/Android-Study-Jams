@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
     tools:context=".activity.SignUp2Activity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
     <TextView
@@ -169,12 +174,13 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/TextInputLout4"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextInputLout3"
         android:layout_toEndOf="@+id/Semester"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
 
         android:layout_marginEnd="10dp"
 
@@ -190,15 +196,14 @@
         app:boxCornerRadiusTopEnd="@android:dimen/app_icon_size"
         app:boxCornerRadiusTopStart="@android:dimen/app_icon_size"
         >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/eg_3"
+        <AutoCompleteTextView
             android:id="@+id/InputSem1"
-            android:inputType="number"
-            android:maxLength="1"
-
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_semester"
+            android:paddingTop="10dp"
+            android:inputType="none"
+            android:paddingBottom="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -218,13 +223,14 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/TextInputLout5"
-        android:layout_width="100dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextInputLout4"
         android:layout_toEndOf="@+id/Section"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
 
 
         android:textSize="20sp"
@@ -238,14 +244,14 @@
         app:boxCornerRadiusTopEnd="@android:dimen/app_icon_size"
         app:boxCornerRadiusTopStart="@android:dimen/app_icon_size"
         >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <AutoCompleteTextView
             android:id="@+id/InputSection1"
-            android:hint="@string/eg_e"
-            android:inputType="text"
-            android:maxLength="1"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Section"
+            android:paddingTop="10dp"
+            android:inputType="none"
+            android:paddingBottom="10dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -323,6 +329,6 @@
         android:layout_marginStart="20dp"/>
 
 
+    </RelativeLayout>
 
-
-</RelativeLayout>
+</ScrollView>
