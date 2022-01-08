@@ -18,6 +18,19 @@ Over a long period, we have been noticing that the students of our college are f
 Technology plays a vital role in day-to-day life activities which in turn made great changes in many work fields and out of them Mobile Application is one of the major developments. A Mobile Application can be used effectively for this job as they are widely used and are known for easy access.
 
 <br/>
+<b> ScreenShots : </b>
+<p align="left"></p>
+<img src="https://user-images.githubusercontent.com/73347275/148654170-1f08be56-0dda-4f9b-b31d-a502af2fea08.jpg" height="300px" width="135px" align="left">
+<img src="https://user-images.githubusercontent.com/73347275/148654164-821e2590-fbb1-45f2-98a1-11c17787618b.jpg" height="300px" width="135px" align="left">
+<img src="https://user-images.githubusercontent.com/73347275/148655279-0d48247f-d3d4-4cb8-9a4f-29d831853a6f.jpg" height="300px" width="135px" align="left">
+<img src="https://user-images.githubusercontent.com/73347275/148654166-20d3a20c-8dac-4a81-a50f-12f7370598b6.jpg" height="300px" width="135px" align="left">
+<img src="https://user-images.githubusercontent.com/73347275/148654165-cb57522d-c32b-452a-bc09-fdc57d9732fe.jpg" height="300px" width="135px">
+
+<b>Video Recording : </b><br/>
+
+
+https://user-images.githubusercontent.com/73347275/148657119-37e0d45f-2b0f-4279-be95-916315fa1d36.mp4
+
 
 <b> Proposed Solution : </b>
 
