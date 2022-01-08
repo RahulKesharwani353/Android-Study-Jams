@@ -9,7 +9,7 @@ import com.example.timely.dataClasses.Periods
 import com.example.timely.R
 
 class MyAdapter(private val PeriodList: ArrayList<Periods>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
-
+    //this is an adapter class for viewing current period, time, and teachers for that particular day
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)
