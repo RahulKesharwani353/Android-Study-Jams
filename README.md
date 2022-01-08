@@ -67,7 +67,8 @@ The app is currently in the Beta testing phase with BIT-Durg institute's student
 Once the app is fully tested and functional in our institute, we will plan to talk to neighboring colleges to propose this app idea and collaborate with them on this. We aim that by next year most of the colleges in our district will use such application for students' ease. <br/>
 
 <i> Constraint :  <br/>
-This app runs for minimum API-26 and currently works for the time-table of CSE Department from BIT-Durg and contains the database only for 3rd, 5th and 7th Semester. </i>
+This app runs for minimum API-26 and currently works for the time-table of CSE Department from BIT-Durg and contains the database only for 3rd, 5th and 7th Semester. 
+The app sends notification only when you are in Home Page.</i>
 
 <hr>
 
