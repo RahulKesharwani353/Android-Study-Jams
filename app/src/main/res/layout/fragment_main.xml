@@ -8,10 +8,14 @@
     android:background="@drawable/gradient"
     android:id="@+id/fragmentMain">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient">
+        >
 
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -297,5 +301,6 @@
         </HorizontalScrollView>
 
     </RelativeLayout>
+    </ScrollView>
 
 </FrameLayout>
