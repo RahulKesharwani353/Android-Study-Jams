@@ -8,13 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.timely.R
 import com.example.timely.databinding.ActivityMainBinding
 import com.example.timely.fragments.KEY
 import com.example.timely.fragments.KEY.Companion.fragmentName
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_main.*
 
 open class MainActivity : AppCompatActivity() {
 
@@ -22,6 +27,7 @@ open class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var drawerLayout: DrawerLayout
+    private  lateinit var appBarConfiguration: AppBarConfiguration
 
     private lateinit var toggle : ActionBarDrawerToggle
 
@@ -31,7 +37,8 @@ open class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         auth = FirebaseAuth.getInstance()
-
+        setContentView(binding.root)
+        drawerLayout = binding.drawerLayout
         displayNavbar()
         if(auth.currentUser == null){
             val intent = Intent(this, LoginActivity::class.java)
@@ -41,18 +48,15 @@ open class MainActivity : AppCompatActivity() {
         }
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
-        setContentView(binding.root)
-
-
 
     }
 
 
     open fun displayNavbar() {
-        drawerLayout = binding.drawerLayout
-        val navView : NavigationView = binding.navView
 
-        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.menu_drawer_open, R.string.menu_drawer_close)
+        val navView : NavigationView = binding.navView
+        val toolBar = binding.toolbar
+        toggle = ActionBarDrawerToggle(this, drawerLayout,toolBar, R.string.menu_drawer_open, R.string.menu_drawer_close)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -132,7 +136,13 @@ open class MainActivity : AppCompatActivity() {
     }
 
 
-
+    override fun onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
 
 
 }
