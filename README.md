@@ -54,6 +54,7 @@ The App has a very simple and interactive interface which helps the students get
 - Navigation Components : Opens a drawer and shows menu options.
 - Viewmodel : To make it more interactive and responsive.
 - RecyclerView : To present the list of different periods we used the efficient recyclerview.
+- Coroutines : To perform asynchronous programming in our app.
 - LiveData & Room Database : We are also using LiveData to update & observe changes in the time-table according to real time and update it to local databases using Room. 
 - Firebase : For user data, authentication and also for storing data of time-table.
 
@@ -61,7 +62,7 @@ The App has a very simple and interactive interface which helps the students get
 
 <b> Application Link & Future Scope : </b>
 
-The app is currently in the Beta testing phase with BIT-Durg institute's students of Computer Science & Engineering branch, later all branch will be added. You can access the app from the apk file here: 
+The app is currently in the Beta testing phase with BIT-Durg institute's students of Computer Science & Engineering branch, later all branch will be added. You can access the app from the apk file here: <br/>
 [Timely App's zip file](https://github.com/KrishChopra22/Android-Study-Jams_repo/files/7834433/Timely.zip)
 
 Once the app is fully tested and functional in our institute, we will plan to talk to neighboring colleges to propose this app idea and collaborate with them on this. We aim that by next year most of the colleges in our district will use such application for students' ease. <br/>
