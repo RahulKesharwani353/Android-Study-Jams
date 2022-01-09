@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.SplshActivity"
     android:background="@drawable/gradient"
+
     >
 
     <com.airbnb.lottie.LottieAnimationView

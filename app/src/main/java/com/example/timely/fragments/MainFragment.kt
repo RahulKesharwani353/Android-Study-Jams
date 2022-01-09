@@ -54,13 +54,18 @@ class MainFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+        PeriodList = arrayListOf()
+
+        auth = FirebaseAuth.getInstance()
+        getcurrentuserdata()
+        displayPeriodData()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         KEY.fragmentName = KEY().HOME
-        auth = FirebaseAuth.getInstance()
+
         if(auth.currentUser == null){
             val intent = Intent(activity, LoginActivity::class.java)
             startActivity(intent)
@@ -71,10 +76,7 @@ class MainFragment : Fragment() {
          navController = Navigation.findNavController(view)
         refreshapp()
 
-        PeriodList = arrayListOf()
 
-        displayPeriodData()
-        getcurrentuserdata()
         recyclerview = binding.recyclerview
 
         // this creates a vertical layout Manager
@@ -385,7 +387,5 @@ class MainFragment : Fragment() {
         notificationManager.notify(1234, builder.build())
 
     }
-
-
 
 }
