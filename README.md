@@ -62,7 +62,7 @@ The App has a very simple and interactive interface which helps the students get
 <b> Application Link & Future Scope : </b>
 
 The app is currently in the Beta testing phase with BIT-Durg institute's students of Computer Science & Engineering branch, later all branch will be added. You can access the app from the apk file here: 
-[YOUR APP LINK HERE](either Github link or Google Play store link of published app or .apk file).
+[Timely App's zip file](https://github.com/KrishChopra22/Android-Study-Jams_repo/files/7834433/Timely.zip)
 
 Once the app is fully tested and functional in our institute, we will plan to talk to neighboring colleges to propose this app idea and collaborate with them on this. We aim that by next year most of the colleges in our district will use such application for students' ease. <br/>
 
